@@ -7,11 +7,11 @@ import { GitHubService } from 'src/github.service';
   styleUrls: ['./contributors-list.component.scss'],
 })
 export class ContributorsListComponent implements OnInit {
-  items: any;
+
   data: any = [];
-  value: any = '';
-  searchTerm: any = '';
-  error: any = '';
+  value: string = '';
+  searchTerm: string = '';
+  error: string = '';
 
   constructor(private githubService: GitHubService) {}
 
