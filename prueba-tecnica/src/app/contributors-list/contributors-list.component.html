@@ -1,0 +1,32 @@
+<div class="contributors">
+  <h3>
+    Escribe el owner y nombre de repositorio del que deseas conocer sus
+    contribuidores
+  </h3>
+
+  <form action="" class="searchbar" (ngSubmit)="onSubmit()">
+    <input placeholder="TonyHermann/portfolio" type="text" [(ngModel)]="value" (change)="getSearchTerm();" name="input"/>
+    <button type="submit">Buscar</button>
+  </form>
+  <p>例: "TonyHermann/portfolio"</p>
+  <h5 *ngIf="searchTerm.length > 3">Displaying data from {{searchTerm}}</h5>
+  <p class="error" *ngIf="error">{{error}}</p>
+  <div class="cards_container">
+
+    <div class="card" *ngFor="let persona of data">
+      <div class="card_header">
+        <p>
+          Username: <a href="{{ persona.html_url }}" target="_blank">{{ persona.login }}</a>
+        </p>
+      </div>
+      <div class="card_body">
+        <img src="{{ persona.avatar_url }}" alt="" width="100px" />
+        <p>Total contributions: {{ persona.contributions }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Antonio Alejo Serral Hermann ２０２２年７月１日</p>
+</footer>

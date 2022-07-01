@@ -1,0 +1,15 @@
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    width: 10vh;
+    margin-left: 10vh;
+  }
+}
+h4, p {
+  text-align: center;
+
+}
